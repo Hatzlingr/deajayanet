@@ -1,0 +1,129 @@
+.page-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.page-scroll > .viewport {
+    -fx-background-color: #F6F8FC;
+}
+
+.page-content {
+    -fx-background-color: #F6F8FC;
+}
+
+.info-card, .timer-card, .menu-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.08), 18, 0.18, 0, 6);
+}
+
+.info-title {
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 29px;
+    -fx-font-weight: 800;
+}
+
+.pc-illustration {
+    -fx-min-width: 96px;
+    -fx-min-height: 96px;
+    -fx-background-color: #EFF6FF;
+    -fx-background-radius: 24px;
+}
+
+.pc-illustration-text {
+    -fx-font-size: 56px;
+}
+
+.vip-badge {
+    -fx-alignment: center;
+    -fx-text-fill: #4F46E5;
+    -fx-font-size: 13px;
+    -fx-font-weight: 900;
+    -fx-padding: 5 22 5 22;
+    -fx-background-color: #EEF2FF;
+    -fx-background-radius: 999px;
+    -fx-border-color: #A5B4FC;
+    -fx-border-radius: 999px;
+}
+
+.avatar-circle {
+    -fx-min-width: 92px;
+    -fx-min-height: 92px;
+    -fx-max-width: 92px;
+    -fx-max-height: 92px;
+    -fx-background-color: #FFCA28;
+    -fx-background-radius: 999px;
+}
+
+.avatar-text {
+    -fx-font-size: 54px;
+}
+
+.member-label {
+    -fx-text-fill: #21B849;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+}
+
+.crown-label {
+    -fx-font-size: 20px;
+}
+
+.main-timer {
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 86px;
+    -fx-font-weight: 300;
+}
+
+.timer-caption {
+    -fx-text-fill: #4F46E5;
+    -fx-font-size: 30px;
+    -fx-font-weight: 700;
+}
+
+.timer-progress {
+    -fx-pref-height: 14px;
+}
+
+.timer-progress > .track {
+    -fx-background-color: #E2E8F0;
+    -fx-background-radius: 999px;
+}
+
+.timer-progress > .bar {
+    -fx-background-color: linear-gradient(to right, #4F46E5, #7C3AED);
+    -fx-background-radius: 999px;
+    -fx-padding: 7px;
+}
+
+.menu-card {
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 28 28 28 28;
+    -fx-text-fill: transparent;
+}
+
+.menu-card:hover {
+    -fx-border-color: #C7D2FE;
+    -fx-background-color: #FBFCFF;
+    -fx-effect: dropshadow(gaussian, rgba(79, 70, 229, 0.18), 22, 0.20, 0, 8);
+}
+
+.menu-icon {
+    -fx-font-size: 45px;
+}
+
+.menu-title {
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+}
+
+.menu-subtitle {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}

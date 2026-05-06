@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane fx:id="root"
+            prefWidth="1366"
+            prefHeight="768"
+            styleClass="pc-shell"
+            stylesheets="@pc-main.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.deajayanet.features.pc.main.PcMainController">
+
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" styleClass="pc-header">
+            <padding>
+                <Insets top="18" right="34" bottom="18" left="34"/>
+            </padding>
+
+            <StackPane styleClass="brand-icon">
+                <Label text="⌘" styleClass="brand-icon-text"/>
+            </StackPane>
+
+            <Label text="DeaJaya.Net" styleClass="brand-title"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Circle radius="7" styleClass="status-dot"/>
+            <Label fx:id="sessionStatusLabel" text="Sesi aktif" styleClass="status-text"/>
+            <Separator orientation="VERTICAL" prefHeight="32" styleClass="header-separator"/>
+            <Label fx:id="miniTimerLabel" text="00:00:00" styleClass="mini-timer"/>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentHost" styleClass="content-host"/>
+    </center>
+</BorderPane>
