@@ -171,7 +171,7 @@
                     <!-- LOGOUT -->
 
                     <Button text="🚪  Log Out"
-                            styleClass="menu-card logout-card"
+                            styleClass="menu-card"
                             GridPane.columnIndex="3"
                             prefHeight="150"
                             maxWidth="Infinity"/>
