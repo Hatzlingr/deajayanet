@@ -1,0 +1,78 @@
+.page-root {
+    -fx-background-color: #F6F8FC;
+    -fx-font-family: "Inter", "Segoe UI", "Arial";
+}
+
+.page-content {
+    -fx-background-color: #F6F8FC;
+}
+
+.page-title {
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+}
+
+.back-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 32px;
+    -fx-font-weight: 500;
+    -fx-padding: 4 12 4 0;
+    -fx-cursor: hand;
+}
+
+.back-button:hover {
+    -fx-text-fill: #4F46E5;
+}
+
+.table-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 18px;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 18px;
+    -fx-effect: dropshadow(gaussian, rgba(15, 23, 42, 0.08), 18, 0.18, 0, 6);
+}
+
+.table-header {
+    -fx-padding: 18 28 18 28;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-header-text {
+    -fx-text-fill: #334155;
+    -fx-font-size: 17px;
+    -fx-font-weight: 800;
+}
+
+.centered {
+    -fx-alignment: CENTER;
+}
+
+.table-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.table-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.data-row {
+    -fx-min-height: 72px;
+    -fx-padding: 0 28 0 28;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.data-row:hover {
+    -fx-background-color: #F8FAFC;
+}
+
+.table-cell-text {
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+}

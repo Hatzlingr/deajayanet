@@ -1,0 +1,59 @@
+.pc-shell {
+    -fx-background-color: #F6F8FC;
+    -fx-font-family: "Inter", "Segoe UI", "Arial";
+}
+
+.pc-header {
+    -fx-background-color: #111A33;
+    -fx-min-height: 96px;
+    -fx-pref-height: 96px;
+}
+
+.brand-icon {
+    -fx-min-width: 54px;
+    -fx-min-height: 54px;
+    -fx-max-width: 54px;
+    -fx-max-height: 54px;
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 14px;
+    -fx-border-color: rgba(255,255,255,0.45);
+    -fx-border-radius: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.20), 12, 0.12, 0, 2);
+}
+
+.brand-icon-text {
+    -fx-text-fill: #132247;
+    -fx-font-size: 26px;
+    -fx-font-weight: 800;
+}
+
+.brand-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+}
+
+.status-dot {
+    -fx-fill: #21E83B;
+}
+
+.status-text {
+    -fx-text-fill: #31E83B;
+    -fx-font-size: 21px;
+    -fx-font-weight: 800;
+}
+
+.header-separator .line {
+    -fx-border-color: rgba(255,255,255,0.65);
+}
+
+.mini-timer {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 23px;
+    -fx-font-weight: 500;
+    -fx-padding: 0 0 0 18;
+}
+
+.content-host {
+    -fx-background-color: #F6F8FC;
+}

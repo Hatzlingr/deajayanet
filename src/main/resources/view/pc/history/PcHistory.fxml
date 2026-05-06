@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="page-root"
+            stylesheets="@pc-history.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.deajayanet.features.pc.history.PcHistoryController">
+
+    <center>
+        <VBox spacing="22" styleClass="page-content">
+            <padding>
+                <Insets top="28" right="64" bottom="44" left="64"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="16">
+                <Button text="←" onAction="#handleBack" styleClass="back-button"/>
+                <Label text="Riwayat Transaksi" styleClass="page-title"/>
+            </HBox>
+
+            <VBox styleClass="table-card" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" spacing="20" styleClass="table-header">
+                    <Label text="Jenis Transaksi" HBox.hgrow="ALWAYS" styleClass="table-header-text"/>
+                    <Label text="Nama" prefWidth="230" styleClass="table-header-text"/>
+                    <Label text="Jumlah Item" prefWidth="120" styleClass="table-header-text centered"/>
+                    <Label text="Harga" prefWidth="170" styleClass="table-header-text"/>
+                    <Label text="Total" prefWidth="170" styleClass="table-header-text"/>
+                </HBox>
+
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="table-scroll" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="historyRowsContainer"/>
+                    </content>
+                </ScrollPane>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
