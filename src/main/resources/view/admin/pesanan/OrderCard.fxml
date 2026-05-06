@@ -6,15 +6,22 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox fx:id="orderCardRoot" alignment="CENTER_LEFT" spacing="16.0" styleClass="order-card card" stylesheets="@pesanan-style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="orderCardRoot"
+      fx:controller="com.deajayanet.features.admin.pesanan.OrderCardController"
+      alignment="CENTER_LEFT"
+      spacing="16.0"
+      styleClass="order-card card"
+      stylesheets="@pesanan-style.css"
+      xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1">
     <padding>
         <Insets bottom="16" left="18" right="18" top="16" />
     </padding>
     <children>
-        <VBox prefWidth="150.0" spacing="5.0">
+        <VBox prefWidth="190.0" spacing="5.0">
             <Label fx:id="orderNumberLabel" styleClass="row-title" text="#ORD-001" />
-            <Label fx:id="orderSourceLabel" styleClass="row-subtitle" text="PC-05 / Guest" />
-            <Label fx:id="orderTimeLabel" styleClass="row-subtitle mono-text" text="12:30" />
+            <Label fx:id="orderSourceLabel" styleClass="row-subtitle" text="PC-05 / Admin" />
+            <Label fx:id="orderTimeLabel" styleClass="row-subtitle mono-text" text="2026-05-07 12:30:00" />
         </VBox>
 
         <VBox spacing="4.0" HBox.hgrow="ALWAYS">
@@ -29,7 +36,7 @@
 
         <VBox alignment="CENTER_RIGHT" prefWidth="170.0" spacing="8.0">
             <Button fx:id="nextKitchenStatusButton" maxWidth="Infinity" styleClass="primary-button" text="Proses" />
-            <Button fx:id="viewOrderDetailButton" maxWidth="Infinity" styleClass="secondary-button" text="Batalkan" />
+            <Button fx:id="cancelOrderButton" maxWidth="Infinity" styleClass="secondary-button" text="Batalkan" />
         </VBox>
     </children>
 </HBox>
