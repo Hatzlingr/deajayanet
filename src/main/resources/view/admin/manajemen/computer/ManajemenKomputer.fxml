@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="page-root"
+            stylesheets="@manajemen-pc-style.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox spacing="6.0" styleClass="page-header">
+            <Label styleClass="page-title" text="Manajemen Komputer" />
+            <Label styleClass="page-subtitle" text="Kelola unit PC, status, area, dan ketersediaan operasional." />
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="content-scroll">
+            <VBox spacing="18.0" styleClass="content-wrapper" prefWidth="800.0">
+                <VBox spacing="14.0" styleClass="card" >
+                    <padding><Insets top="18" right="18" bottom="18" left="18" /></padding>
+                    <HBox alignment="CENTER_LEFT">
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label fx:id="computerFormTitleLabel" styleClass="section-title" text="Tambah Komputer" />
+                            <Label fx:id="computerFormSubtitleLabel" styleClass="section-subtitle" text="Data PC warnet." />
+                        </VBox>
+                        <Label fx:id="computerEditModeBadge" styleClass="badge badge-info" text="CREATE" />
+                    </HBox>
+                    <GridPane hgap="10.0" vgap="10.0">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                            <Label styleClass="form-label" text="Kode PC" />
+                            <TextField fx:id="pcCodeField" promptText="PC-01" styleClass="form-input" />
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                            <Label styleClass="form-label" text="Area" />
+                            <TextField fx:id="pcAreaField" promptText="Reguler / VIP" styleClass="form-input" />
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                            <Label styleClass="form-label" text="Status" />
+                            <ComboBox fx:id="pcStatusCombo" maxWidth="Infinity" promptText="Kosong / Aktif / Maintenance" styleClass="form-combo" />
+                        </VBox>
+                        <VBox spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <Label styleClass="form-label" text="Ketersediaan" />
+                            <ComboBox fx:id="pcActiveCombo" maxWidth="Infinity" promptText="Aktif / Nonaktif" styleClass="form-combo" />
+                        </VBox>
+                    </GridPane>
+                    <VBox spacing="6.0">
+                        <Label styleClass="form-label" text="Spesifikasi" />
+                        <TextArea fx:id="pcSpecArea" prefRowCount="3" promptText="CPU, GPU, RAM, catatan maintenance" styleClass="form-area" wrapText="true" />
+                    </VBox>
+                    <HBox spacing="8.0">
+                        <Button fx:id="saveComputerButton" maxWidth="Infinity" HBox.hgrow="ALWAYS" styleClass="primary-button" text="Simpan" />
+                        <Button fx:id="cancelEditComputerButton" styleClass="secondary-button" text="Batal" visible="false" managed="false" />
+                    </HBox>
+                </VBox>
+
+                <VBox spacing="14.0" HBox.hgrow="ALWAYS">
+                    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="toolbar">
+                        <TextField fx:id="searchComputerField" promptText="Cari kode PC / area / spek..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+                        <ComboBox fx:id="computerStatusFilterCombo" prefWidth="170.0" promptText="Semua Status" styleClass="form-combo" />
+                    </HBox>
+                    <VBox fx:id="computerRowContainer" spacing="12.0" />
+                    <VBox fx:id="emptyComputerState" alignment="CENTER" spacing="8.0" styleClass="empty-state" visible="false" managed="false">
+                        <Label styleClass="empty-title" text="Belum ada PC" />
+                        <Label styleClass="empty-subtitle" text="Tambahkan unit PC dari form di kiri." />
+                    </VBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

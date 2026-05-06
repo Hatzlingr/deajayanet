@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="page-root" stylesheets="@pesanan-style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <VBox spacing="14.0" styleClass="page-header">
+            <VBox spacing="4.0">
+                <Label styleClass="page-title" text="Pusat Pesanan" />
+                <Label styleClass="page-subtitle" text="Kitchen Display System untuk order F&amp;B yang sudah lunas." />
+            </VBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="toolbar">
+                <TextField fx:id="searchOrderField" promptText="Cari nomor order / PC / user..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+                <ComboBox fx:id="kitchenStatusFilterCombo" prefWidth="180.0" promptText="Semua Status" styleClass="form-combo" />
+                <Button fx:id="refreshOrderButton" styleClass="secondary-button" text="Refresh" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="content-scroll">
+            <VBox spacing="16.0" styleClass="content-wrapper">
+                <HBox spacing="10.0">
+                    <Label styleClass="badge badge-warning" text="Menunggu" />
+                    <Label styleClass="badge badge-info" text="Proses" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label styleClass="section-subtitle" text="Order billing dan pesanan yang sudah selesai tidak tampil di halaman ini." />
+                </HBox>
+
+                <VBox fx:id="orderCardContainer" spacing="12.0" />
+
+                <VBox fx:id="emptyOrderState" alignment="CENTER" managed="false" spacing="8.0" styleClass="empty-state" visible="false">
+                    <Label styleClass="empty-title" text="Belum ada pesanan F&amp;B lunas" />
+                    <Label styleClass="empty-subtitle" text="Pesanan akan muncul setelah pembayaran sukses." />
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

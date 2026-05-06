@@ -1,0 +1,47 @@
+@import "../shared/design-system.css";
+
+.pc-card {
+    -fx-min-height: 300;
+}
+
+.pc-code {
+    -fx-font-size: 20px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #0F172A;
+}
+
+.session-info-box {
+    -fx-background-color: #F8FAFC;
+    -fx-background-radius: 14;
+    -fx-padding: 12;
+}
+
+.info-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #64748B;
+}
+
+.info-value {
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #0F172A;
+}
+
+.timer-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #64748B;
+}
+
+.timer-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #2563EB;
+}
+
+.extend-panel {
+    -fx-background-color: #EFF6FF;
+    -fx-background-radius: 14;
+    -fx-padding: 12;
+}
